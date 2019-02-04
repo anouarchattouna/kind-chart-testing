@@ -37,6 +37,7 @@ create_kind_cluster() {
     curl -sSLo kind "https://github.com/kubernetes-sigs/kind/releases/download/$KIND_VERSION/kind-linux-amd64"
     echo 'cat kind '
     cat kind
+    ls -ltra
     chmod +x kind
     sudo mv kind /usr/local/bin/kind
 
