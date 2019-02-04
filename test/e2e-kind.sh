@@ -39,7 +39,7 @@ create_kind_cluster() {
     sudo chmod +x /usr/local/bin/kind
 
     echo 'ls /usr/local/bin/ : ' 
-    ls -ltr
+    ls -ltr /usr/local/bin/
 
     kind create cluster --name "$CLUSTER_NAME" --config test/kind-config.yaml --image "kindest/node:$K8S_VERSION"
 
