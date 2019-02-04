@@ -36,9 +36,9 @@ create_kind_cluster() {
 
     curl -sSLo kind "https://github.com/kubernetes-sigs/kind/releases/download/$KIND_VERSION/kind-linux-amd64"
     chmod +x kind
-    sudo mv kind /usr/local/bin/kind
-    echo '/usr/local/bin/ : '
-    ls -ltr /usr/local/bin/
+    sudo mv kind /usr/bin/kind
+    echo '/usr/bin/ : '
+    ls -ltr /usr/bin/
 
     kind create cluster --name "$CLUSTER_NAME" --config test/kind-config.yaml --image "kindest/node:$K8S_VERSION"
 
