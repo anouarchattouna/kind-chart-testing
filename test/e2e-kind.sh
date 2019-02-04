@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 readonly CT_VERSION=v2.2.0
-readonly KIND_VERSION=0.2.0-alpha
+readonly KIND_VERSION=0.1.0
 readonly CLUSTER_NAME=chart-testing
 readonly K8S_VERSION=v1.13.2
 
@@ -35,9 +35,6 @@ create_kind_cluster() {
     echo 'Installing kind...'
 
     curl -sSLo kind "https://github.com/kubernetes-sigs/kind/releases/download/$KIND_VERSION/kind-linux-amd64"
-    echo 'cat kind '
-    cat kind
-    ls -ltra
     chmod +x kind
     sudo mv kind /usr/local/bin/kind
 
