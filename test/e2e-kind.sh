@@ -35,13 +35,9 @@ create_kind_cluster() {
     echo 'Installing kind...'
 
     curl -sSLo kind "https://github.com/kubernetes-sigs/kind/releases/download/$KIND_VERSION/kind-linux-amd64"
-    sudo cp kind /usr/local/bin/kind
+    sudo mv kind /usr/local/bin/kind
     sudo chmod +x /usr/local/bin/kind
 
-    echo 'pwd : ' 
-    pwd
-    echo 'ls . : ' 
-    ls -ltr
     echo 'ls /usr/local/bin/ : ' 
     ls -ltr
 
