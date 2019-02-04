@@ -1,0 +1,9 @@
+dependencies:
+- name: mongodb
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 0.4.29
+- name: minio
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 2.4.1
+digest: sha256:36ee591deed2cfde34923f8af20d93e1400ed79b8a8100556a435d51cd699a02
+generated: 2019-02-04T13:32:40.8550481Z
