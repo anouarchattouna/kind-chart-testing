@@ -33,13 +33,13 @@ docker_exec() {
 
 create_kind_cluster() {
     echo 'Installing kind...'
+    go version
+    #curl -sSLo kind "https://github.com/kubernetes-sigs/kind/releases/download/$KIND_VERSION/kind-linux-amd64"
+    #sudo mv kind /usr/local/bin/kind
+    #sudo chmod +x /usr/local/bin/kind
 
-    curl -sSLo kind "https://github.com/kubernetes-sigs/kind/releases/download/$KIND_VERSION/kind-linux-amd64"
-    sudo mv kind /usr/local/bin/kind
-    sudo chmod +x /usr/local/bin/kind
-
-    echo 'ls /usr/local/bin/ : ' 
-    ls -ltr /usr/local/bin/
+    #echo 'ls /usr/local/bin/ : ' 
+    #ls -ltr /usr/local/bin/
 
     kind create cluster --name "$CLUSTER_NAME" --config test/kind-config.yaml --image "kindest/node:$K8S_VERSION"
 
