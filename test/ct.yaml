@@ -1,6 +1,5 @@
 helm-extra-args: --timeout 800
 chart-dirs: .
-charts: mychart
-chart-repos: stable=https://kubernetes-charts.storage.googleapis.com
-chart-yaml-schema: ./mychart/chart_schema.yaml
-lint-conf: ./mychart/lintconf.yaml
+charts: mychart,mean-k8s
+chart-yaml-schema: ./chart_schema.yaml
+lint-conf: ./lintconf.yaml
